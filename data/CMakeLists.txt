@@ -75,6 +75,7 @@ macro(GENERATE_CNOID_PROJECT PROJECT_FOLDER)
     cnoid/common/robot.conf
     cnoid/common/rtc.conf.choreonoid
     cnoid/common/sim_mc.cnoid
+    cnoid/common/sim_mc_wall.cnoid
     cnoid/common/sim_mc_withTable.cnoid
     cnoid/${PROJECT_FOLDER}/sim_mc.py
     cnoid/${PROJECT_FOLDER}/PDcontroller.conf.choreonoid
@@ -89,7 +90,8 @@ macro(GENERATE_CNOID_PROJECT PROJECT_FOLDER)
   set(SENSOR_PORT "lhsensor")
   configure_file(cnoid/${PROJECT_FOLDER}/sim_mc.py "${CMAKE_BINARY_DIR}/cnoid/${PROJECT_FOLDER}/${SIM_SCRIPT}" @ONLY)
   configure_file(cnoid/common/sim_mc.cnoid "${CMAKE_BINARY_DIR}/cnoid/${PROJECT_FOLDER}/sim_mc_udp.cnoid" @ONLY)
-  configure_file(cnoid/common/sim_mc_withTable.cnoid "${CMAKE_BINARY_DIR}/cnoid/${PROJECT_FOLDER}/sim_mc_udp.cnoid" @ONLY)
+  configure_file(cnoid/common/sim_mc_wall.cnoid "${CMAKE_BINARY_DIR}/cnoid/${PROJECT_FOLDER}/sim_mc_udp_wall.cnoid" @ONLY)
+  configure_file(cnoid/common/sim_mc_withTable.cnoid "${CMAKE_BINARY_DIR}/cnoid/${PROJECT_FOLDER}/sim_mc_udp_withTable.cnoid" @ONLY)
   install(DIRECTORY "${CMAKE_BINARY_DIR}/cnoid/${PROJECT_FOLDER}/" DESTINATION "${PROJECT_DESTINATION}")
   install(PROGRAMS cnoid/common/clear-omninames.sh DESTINATION "${PROJECT_DESTINATION}")
 endmacro()
