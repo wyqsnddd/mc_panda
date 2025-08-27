@@ -33,11 +33,33 @@ This package requires:
 
 If [mc_openrtm](https://github.com/jrl-umi3218/mc_openrtm) is installed this will also install compatible Choreonoid projects for the panda robot.
 
-Original xacro files from:
-- [franka_ros] for the main definitions and collisions specifications
-- [franka_gazebo](https://github.com/mkrizmancic/franka_gazebo) for the inertial parameters
+Original xacro files from [franka_ros]
 
 Pump model was downloaded from [Schmalz](https://www.schmalz.com/en/10.03.01.00314)
+
+
+### Video presentation
+
+A video demonstrating panda motion generation and simultaneous pump actuation employing this implementation is available here:
+
+[![Video presentation](https://img.youtube.com/vi/juynq6x9JJ8/0.jpg)](https://youtu.be/juynq6x9JJ8 "Safe Impacts with Soft Contacts Based on Learned Deformations")
+
+### Reference
+
+Writing code takes time.
+If this implementation is useful for your research, please cite the related publication:
+
+```
+@INPROCEEDINGS{Dehio2021ICRA,
+  title={Robot-Safe Impacts with Soft Contacts Based on Learned Deformations}, 
+  author={Dehio, Niels and Kheddar, Abderrahmane},
+  booktitle={IEEE Int. Conf. on Robotics and Automation},
+  pages={1357-1363},
+  year={2021},
+  pdf = {https://hal.archives-ouvertes.fr/hal-02973947/document},
+  url = {https://hal.archives-ouvertes.fr/hal-02973947}
+}
+```
 
 [![I.AM.Logo](https://i-am-project.eu/templates/yootheme/cache/iam_logo-horizontaal_XL-9e4a8a2a.png)](https://i-am-project.eu/index.php)
 
